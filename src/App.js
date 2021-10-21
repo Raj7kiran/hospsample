@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Container } from 'react-bootstrap';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import LoginScreen from './screens/LoginScreen'
+import AddUsersScreen from './screens/AddUsersScreen'
+import AdminAddUsersScreen from './screens/AdminAddUsersScreen'
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <Header />
+            <main className='py-3'>
+                <Container>
+                    
+                    <Route path='/login' component={LoginScreen} />
+                    <Route path='/addusers' component={AddUsersScreen} />
+                    <Route path='/admin/addusers' component={AdminAddUsersScreen} />
+                    
+                </Container>
+            </main>
+        <Footer />
+      </Router>
   );
 }
 
