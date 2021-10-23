@@ -31,7 +31,7 @@ const Header = () => {
                   </LinkContainer>
                 </NavDropdown>
               
-                <LinkContainer to='/login'>
+                <LinkContainer to='/'>
                   <Nav.Link>
                     <i className='fas fa-user'></i> Login
                   </Nav.Link>
@@ -39,11 +39,11 @@ const Header = () => {
               
              
                 <NavDropdown title='Admin' id='adminmenu'>
-                  <LinkContainer to='/admin/userlist'>
-                    <NavDropdown.Item>Users</NavDropdown.Item>
+                  <LinkContainer to='/admin/clientlist'>
+                    <NavDropdown.Item>Clients</NavDropdown.Item>
                   </LinkContainer>
-                  <LinkContainer to='/admin/addusers'>
-                    	<NavDropdown.Item>Add Users</NavDropdown.Item>
+                  <LinkContainer to='/admin/master'>
+                    	<NavDropdown.Item>Master</NavDropdown.Item>
                   </LinkContainer>
                   
                 </NavDropdown>

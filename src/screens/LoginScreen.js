@@ -25,8 +25,7 @@ const LoginScreen = ({ location }) => {
 				<Form.Group controlId='password'>
 					<Form.Label>Password</Form.Label>
 						<Form.Control type= 'password'
-										placeholder='Enter password'
-										
+										placeholder='Enter password'								
 										
 						>
 						</Form.Control>
@@ -36,15 +35,7 @@ const LoginScreen = ({ location }) => {
 				</Button>
 			</Form>
 
-			<Row className='py-3'>
-				<Col>
-					New Customer?{' '}
-					<Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>
-						Register
-					</Link>
-				</Col>
-			</Row>
-
+			
 		</FormContainer>
 		)
 }
